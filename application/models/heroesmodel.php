@@ -65,4 +65,22 @@ class HeroesModel
         $query->bind_param("i", $hero_id);
         $query->execute();
     }
+
+    /**
+     * Get a hero from database
+     */
+    public function getHero($param_id)
+    {
+        $sql = "SELECT id, name, race, height FROM hero WHERE id = $param_id";
+
+        if (!$result = $this->db->query($sql)){
+            echo("Error description: " . $this->db->error);
+        }
+
+        while($row = $result->fetch_array(MYSQLI_ASSOC))
+        {
+            $temp[] = $row;
+        }
+        return $temp;
+    }
 }
