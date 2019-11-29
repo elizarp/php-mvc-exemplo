@@ -17,17 +17,20 @@
 <!-- header -->
 <div class="container">
     <!-- Info -->
-    <div class="where-are-we-box">
+    <!--
+        <div class="where-are-we-box">
         Everything in this box is loaded from <span class="bold">application/views/_templates/header.php</span> !
         <br />
         The green line is added via JavaScript (to show how to integrate JavaScript).
-    </div>
+    </div>-->
     <h1>The header (used on all pages)</h1>
     <!-- demo image -->
-    <h3>Demo image, to show usage of public/img folder</h3>
+    <!--
+        <h3>Demo image, to show usage of public/img folder</h3>
     <div>
         <img src="<?php echo URL; ?>public/img/demo-image.png" />
     </div>
+-->
     <!-- navigation -->
     <h3>Demo Navigation</h3>
     <div class="navigation">
@@ -38,6 +41,7 @@
             <li><a href="<?php echo URL; ?>home/exampletwo"><?php echo URL; ?>home/exampletwo</a></li>
             <!-- "heroes" and "heroes/index" are the same -->
             <li><a href="<?php echo URL; ?>heroes/"><?php echo URL; ?>heroes/index</a></li>
+            <li><a href="<?php echo URL; ?>graph/"><?php echo URL; ?>heroes/graph</a></li>
         </ul>
     </div>
     <!-- simple div for javascript output, just to show how to integrate js into this MVC construct -->

@@ -84,4 +84,21 @@ class Heroes extends Controller
         // where to go after hero has been deleted
         header('location: ' . URL . 'heroes/index');
     }
+
+
+    /**
+     * PAGE: graph
+     * This method handles what happens when you move to http://yourproject/heroes/graph
+     */
+    public function graph()
+    {
+        // simple message to show where you are
+        # echo 'Message from Controller: You are in the Controller: Heroes, using the method graph().';
+
+        // load views. within the views we can echo out $heroes and $amount_of_heroes easily
+        require 'application/views/_templates/header.php';
+        require 'application/views/heroes/graph.php';
+        require 'application/views/_templates/footer.php';
+    }
+
 }
